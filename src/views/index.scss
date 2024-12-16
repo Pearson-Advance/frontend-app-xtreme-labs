@@ -1,0 +1,17 @@
+/* Main.scss */
+@import "../variables.scss";
+
+.main-container {
+    background-color: $app-background-color;
+    padding: 10px;
+}
+
+.link-muted {
+    color: $hyperlink-color !important;
+    text-decoration: underline;
+    font-weight: 700; // This makes the font more similar to the mock up
+}
+
+.title-container {
+    padding-left: 10px;
+}
