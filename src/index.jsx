@@ -1,5 +1,7 @@
+import React from 'react';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
+import { Container } from '@edx/paragon';
 
 import {
   APP_INIT_ERROR, APP_READY, subscribe, initialize,
@@ -7,13 +9,15 @@ import {
 import { AppProvider, ErrorPage } from '@edx/frontend-platform/react';
 import ReactDOM from 'react-dom';
 
-import App from './components';
+import App from './views';
 import './index.scss';
 
 subscribe(APP_READY, () => {
   ReactDOM.render(
     <AppProvider>
-      <App />
+      <Container size="xl">
+        <App />
+      </Container>
     </AppProvider>,
     document.getElementById('root'),
   );
