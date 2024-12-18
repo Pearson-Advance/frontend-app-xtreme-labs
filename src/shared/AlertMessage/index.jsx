@@ -10,23 +10,21 @@ const AlertMessage = ({
   message,
   children,
 }) => (
-  <div className="error-container">
-    <Alert variant={variant}>
-      <Alert.Heading>{heading}</Alert.Heading>
-      {message && (
-        <>
-          <hr />
-          <p className="mb-0">{message}</p>
-        </>
-      )}
-      {children}
-      <hr />
-    </Alert>
-  </div>
+  <Alert variant={variant} className="error-container">
+    <Alert.Heading>{heading}</Alert.Heading>
+    {message && (
+      <>
+        <hr />
+        <p className="mb-0">{message}</p>
+      </>
+    )}
+    {children}
+    <hr />
+  </Alert>
 );
 
 AlertMessage.propTypes = {
-  variant: PropTypes.string,
+  variant: PropTypes.oneOf(['danger', 'success', 'warning']),
   heading: PropTypes.string.isRequired,
   message: PropTypes.string,
   children: PropTypes.node,

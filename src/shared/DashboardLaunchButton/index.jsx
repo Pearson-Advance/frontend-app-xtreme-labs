@@ -6,7 +6,7 @@ import { Button } from 'react-paragon-topaz';
 
 import AlertMessage from 'shared/AlertMessage';
 import { xtremeLabsUrl, defaultErrorMessage } from 'constants';
-import { eventManager } from '../../helpers';
+import { eventManager } from 'helpers';
 
 import './index.scss';
 
