@@ -8,14 +8,14 @@ import App from '../index';
 jest.mock('../../shared/DashboardLaunchButton', () => () => <div>Mocked DashboardLaunchButton Component</div>);
 
 jest.mock('constants', () => ({
-  mfeBaseUrl: '/base-url',
+  course: '/:courseId',
 }));
 
 describe('App Component', () => {
   it('renders DashboardLaunchButton component by default', async () => {
     await act(async () => {
       render(
-        <MemoryRouter initialEntries={['/base-url']}>
+        <MemoryRouter initialEntries={['/:courseId']}>
           <App />
         </MemoryRouter>,
       );

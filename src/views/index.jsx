@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Route, useLocation } from 'react-router-dom';
 
-import { mfeBaseUrl } from 'constants';
+import { course } from 'constants';
 
 import DashboardLaunchButton from 'shared/DashboardLaunchButton';
 
@@ -32,7 +32,7 @@ const App = () => {
   return (
     <Route
       exact
-      path={`${mfeBaseUrl}`}
+      path={`${course}`}
       render={(props) => (
         <DashboardLaunchButton
           {...props}
